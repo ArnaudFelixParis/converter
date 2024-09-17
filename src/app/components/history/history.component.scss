@@ -1,0 +1,27 @@
+.history-card {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+
+  &-table {
+    display: flex;
+    flex-direction: column;
+
+    &-row {
+      display: flex;
+      justify-content: space-between;
+
+      &:first-child {
+        font-weight: bold;
+        font-size: 15px;
+        border-bottom: 1px solid gray;
+      }
+
+      div {
+        flex: 1 1 0px;
+        padding: 8px;
+      }
+    }
+  }
+}
+

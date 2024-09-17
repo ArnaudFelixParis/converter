@@ -1,0 +1,34 @@
+.converter-card {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.converter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.result {
+  text-align: center;
+  margin-top: 10px;
+
+  h3 {
+   font-size: 24px;
+  }
+}
+
+.exchange-rate {
+  text-align: center;
+  margin-bottom: 20px;
+
+  h2 {
+    text-align: left;
+  }
+}

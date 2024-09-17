@@ -1,0 +1,30 @@
+<mat-card class="converter-card">
+  <mat-card-header>
+    <mat-card-title>Convertisseur EUR/USD</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="converter-form">
+      <mat-slide-toggle [(ngModel)]="isEUR" name="currencyToggle" (change)="convert()">
+        Saisir en {{ isEUR ? 'EUR' : 'USD' }}
+      </mat-slide-toggle>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>{{ currentCurrency }}</mat-label>
+        <input matInput type="number" [(ngModel)]="amount" name="amount" (input)="convert()" />
+      </mat-form-field>
+      <div class="exchange-rate">
+        <h2>Taux de Change EUR/USD: {{ rate | number:'1.4-4' }}</h2>
+      </div>
+
+      <div class="result">
+        <h3>Conversion : {{ convertedAmount | number:'1.2-2' }} {{ targetCurrency }}</h3>
+      </div>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Taux de Change Fixe</mat-label>
+        <input matInput type="number" [(ngModel)]="fixedRate" name="fixedRate" (ngModelChange)="setFixedRate()" placeholder="Laisser vide pour désactiver" />
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+<app-history></app-history>

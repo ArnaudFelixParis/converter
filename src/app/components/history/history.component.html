@@ -1,0 +1,35 @@
+<mat-card class="history-card">
+  <mat-card-header>
+    <mat-card-title>Historique des Conversions</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="history-card-table">
+      <div class="history-card-table-row">
+        <div>Taux Réel</div>
+        <div>Taux Saisi</div>
+        <div>Entrée</div>
+        <div>Sortie</div>
+        <div>Date</div>
+      </div>
+      @for (element of history | async ; track element) {
+        <div class="history-card-table-row">
+          <div> {{ element.rate | number:'1.4-4' }} </div>
+
+          <div> 
+            {{ element.fixedRate ? (element.fixedRate | number:'1.4-4') : 'N/A' }} 
+          </div>
+
+          <div> 
+            {{ element.inputAmount | number:'1.2-2' }} {{ element.inputCurrency }} 
+          </div>
+    
+          <div> 
+            {{ element.outputAmount | number:'1.2-2' }} {{ element.outputCurrency }} 
+          </div>
+
+          <div> {{ element.timestamp | date:"dd/MM/yy 'à' hh:mm:ss a" }} </div>
+        </div>
+      }
+    </div>
+  </mat-card-content>
+</mat-card>

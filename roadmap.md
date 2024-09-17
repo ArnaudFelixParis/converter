@@ -1,0 +1,12 @@
+- Ajouter un "debounce" (RxJS) sur les inputs afin de ne pas convertir instantanément à chaque caractère saisi
+- Ajouter une snackbar ou autre élément permettant de mieux voir quel taux de change est actif (fixe ou dynamique)
+- Rendre l'UI moins austère
+- Remplacer Angular Material par une librairie de composants "maison", si elle existe
+- Utiliser une librairie de CSS de type "tailwind" ou équivalent maison, si elle existe
+- Ajouter quelques animations (très légères): peut être un fadeIn ou slideInLeft lorsqu'un nouvel item du tableau d'historique est ajouté
+- Un bouton permettant de réinitialiser (vider) l'historique
+- Utiliser les Signal au lieu de RxJS (dans certains cas)
+- Déplacer le composant "converter.component" dans un dossier "pages"
+- Lazy loader ce composant de page
+- Créer des tests unitaires
+- Déplacer l'interface TS ConversionRecord dans un repertoire et fichier dédidé (app/core/models/conversion-record.interface.ts ?)
